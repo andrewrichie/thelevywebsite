@@ -1,0 +1,386 @@
+.levy_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subbody {
+    margin-top: -200px;
+}
+
+@media (max-width: 768px) {
+    .subbody {
+        margin-top: -10px;
+    }
+}
+
+
+
+.dataArch {
+    margin-bottom: 95px;
+    font-family: var(--ff-primary);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    max-width: 1400px;
+    margin-top: 200px;
+}
+
+.datacen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    max-width: 1400px;
+}
+
+.dataArch :nth-child(1) {
+    color: var(--green-primary);
+    font-size: 46.6px;
+    font-weight: 700;
+}
+
+.dataArch :nth-child(2) {
+    font-size: 26px;
+    
+}
+
+.dataArch_grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    gap: 87px;
+    max-width: 1720px;
+}
+
+.dataArch_gridb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    gap: 87px;
+    max-width: 1720px;
+}
+
+.archGrid {
+    display: flex;
+    max-height: 730px;
+}
+
+.archNum_a {
+    background-color: #EF3731;
+    background-image: url(levy\ img/redgroup.png);
+    color: white;
+    font-size: 34.28px;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    border-radius: 15.28px;
+    width: 150px;
+    padding-left: 13px;
+    padding-top: 31px;
+    max-height: 730px;
+}
+
+.archNum_b {
+    background-color: #FDB813;
+    background-image: url(levy\ img/yellowgroup.png);
+    color: white;
+    font-size: 34.28px;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    border-radius: 15.28px;
+    width: 150px;
+    padding-left: 13px;
+    padding-top: 31px;
+}
+
+.archNum_bb {
+    background-color: #FDB813;
+    background-image: url(levy\ img/yellowgroup.png);
+    color: white;
+    font-size: 34.28px;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    border-radius: 15.28px;
+    width: 150px;
+    padding-left: 13px;
+    padding-top: 31px;
+    height: 770px;
+}
+
+.archNum_c {
+    background-color: #11ab4b;
+    background-image: url(levy\ img/greengroup.png);
+    color: white;
+    font-size: 34.28px;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    border-radius: 15.28px;
+    width: 150px;
+    max-height: 730px;
+    padding-left: 13px;
+    padding-top: 31px;
+
+}
+
+.archGrid_info {
+    background-color: #F5F7F8;
+    border: 0.7px solid black;
+    border-radius: 15.28px;
+    margin-left: -70px;
+    width: 332px;
+    /* height: 730px; */
+    padding: 34px 34px 24px 28px;
+   
+}
+
+.infob {
+    /* height: 730px; */
+}
+
+.archGrid_infobb {
+    background-color: #F5F7F8;
+    border: 0.7px solid black;
+    border-radius: 15.28px;
+    margin-left: -70px;
+    width: 332px;
+    height: 770px;
+    padding: 34px 34px 24px 28px;
+    /* margin-top: 90px; */
+}
+
+.archGrid_info img {
+    width: 46px;
+    height: 46px;
+}
+
+.archGird_topic {
+    font-size: 34.28px;
+    font-weight: 700;
+    font-family: var(--ff-primary);
+    margin-bottom: 17px;
+
+}
+
+.archGird_sol {
+    font-size: 18.28px;
+    font-weight: 400;
+    font-family: var(--ff-secondary);
+    margin-top: 10px;
+}
+
+.topspp {
+    margin-top: 200px;
+}
+
+@media (max-width: 1300px) {
+    .archGrid_info {
+        background-color: #F5F7F8;
+        border: 0.7px solid black;
+        border-radius: 15.28px;
+        margin-left: -70px;
+        width: 250px;
+        height: 630px;
+        padding: 24px 24px 14px 18px;
+     
+    }
+
+    .archGrid_infobb {
+        background-color: #F5F7F8;
+        border: 0.7px solid black;
+        border-radius: 15.28px;
+        margin-left: -70px;
+        width: 250px;
+        height: 630px;
+        padding: 24px 24px 14px 18px;
+    }
+
+    .archNum_a, .archNum_b, .archNum_c {
+        max-height: 630px;
+    }
+
+    .archGird_sol {
+        font-size: 15px;
+    }
+
+    .dataArch_grid, .dataArch_gridb {
+        padding: 20px;
+        gap: 40px;
+    }
+
+
+
+    .dataArch {
+        padding: 20px;
+    }
+
+    .archNum_bb {
+        height: 630px;
+    }
+}
+
+@media (max-width: 998px) {
+
+    .archGrid_info, .archGrid_infobb {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dataArch {
+        margin-top: 100px;
+        
+    }
+
+    .dataArch :nth-child(1) {
+        font-size: 31px;
+    }
+
+
+    .dataArch_grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dataArch_gridb {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .archGrid_info img, .archGird_topic {
+        flex: 1 0 50%;
+    } */
+
+    .archGird_sol {
+        flex: 1 0 100%;
+    }
+
+    .archNum_b {
+        max-height: 630px;
+    }
+
+    .archGrid {
+        height: 300px;
+        width: 700px;
+    }
+
+    .archGrid_info, .archGrid_infobb {
+        width: 700px;
+        height: 300px;
+    }
+
+    .archNum_bb {
+        height: 300px;
+    }
+
+    .archGrid_info img, .archGrid_infobb img {
+        margin-right: 20px;
+    }
+
+  
+}
+
+@media (max-width: 765px) {
+
+    .dataArch :nth-child(2) {
+        font-size: 12px;
+    }
+
+    .dataArch {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .dataArch :nth-child(1) {
+        font-size: 25px;
+    }
+ 
+ 
+    .archGrid {
+        height: 250px;
+        width: 600px;
+        
+    }
+
+    .dataArch_grid {
+        gap: 15px;
+    }
+
+    .archGrid_info, .archGrid_infobb {
+        width: 600px;
+        height: 250px;
+        margin-left: -85px;
+    }
+
+    .archGird_topic {
+        font-size: 21px;
+        margin-bottom: 0px;
+    }
+
+    .archGird_sol {
+        font-size: 11px;
+        margin-top: 0px;
+    }
+
+    .archGrid_info img, .archGrid_infobb img {
+        width: 28px;
+        height: 28px;
+        margin-right: 9px;
+    }
+
+    
+    .archNum_bb {
+        height: 250px;
+    }
+
+    .archNum_a, .archNum_b, .archNum_bb, .archNum_c {
+        font-size: 17px;
+        
+    }
+}
+
+@media (max-width: 568px) {
+    .archGrid {
+        height: 150px;
+        width: 350px;
+    }
+
+    .archGrid_info, .archGrid_infobb {
+        width: 350px;
+        height: 150px;
+        padding: 15px 10px;
+        margin-left: -105px;
+    }
+
+    .dataArch :nth-child(1) {
+        font-size: 21px;
+    }
+
+    .archGird_topic {
+        font-size: 15px;
+    }
+
+    .archGird_sol {
+        font-size: 8px;
+    }
+
+    .archGrid_info img, .archGrid_infobb img {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    
+    .archNum_bb {
+        height: 150px;
+    }
+
+    .archNum_a, .archNum_b, .archNum_bb, .archNum_c {
+        font-size: 12px;
+        
+    }
+
+}
