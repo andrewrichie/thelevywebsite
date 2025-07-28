@@ -2629,7 +2629,7 @@ image-stack .image .active {
 
 /* Right-side text */
 .slide-text {
-    width: 40%;
+    width: 50%;
     color: white;
     font-family: var(--ff-secondary);
     text-align: left;
@@ -2881,7 +2881,7 @@ image-stack .image .active {
 
 /* Text now on the left */
 .reverse-swiper .slide-text {
-    width: 40%;
+    width: 50%;
     font-family: var(--ff-secondary);
     color: white;
     margin-right: 31px;
