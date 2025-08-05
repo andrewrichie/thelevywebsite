@@ -1533,7 +1533,7 @@ h3 {
     }
 
     .exp {
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .maskcon {
@@ -1541,18 +1541,18 @@ h3 {
     }
 
     .hrmask {
-        width: 289px;
+        width: 285px;
         height: 50px;
     }
     
     .hrmaskb {
-        width: 289px;
-        height: 110px;
+        width: 285px;
+        height: 125px;
     }
 
     .hrmaskc {
-        width: 319px;
-        height: 195px;
+        width: 290px;
+        height: 210px;
     }
 }
 
@@ -1568,17 +1568,21 @@ h3 {
         width: 400px;
        
         gap: 10px !important;
-        margin-left: 100px;
+        margin-left: 80px;
     }
 
     .pressIndex_img div {
         border-radius: 20px !important;
-       
+        padding: 5px;
     }
 
     .maskcon {
         gap: 20px;
         
+    }
+
+       .conmas {
+        padding: 0px;
     }
 
     .exp {
@@ -1589,18 +1593,18 @@ h3 {
 
     
     .hrmask {
-        width: 189px;
+        width: 195px;
         height: 50px;
     }
     
     .hrmaskb {
-        width: 189px;
+        width: 195px;
         height: 110px;
     }
 
     .hrmaskc {
-        width: 249px;
-        height: 138px;
+        width: 199px;
+        height: 158px;
         border-radius: 10px;
         border: 0;
         display: flex;
@@ -1608,6 +1612,26 @@ h3 {
         align-items: center;
     }
 }
+
+/* @media (max-width: 676px) {
+
+     .hrmask {
+        width: 185px;
+        height: 50px;
+    }
+    
+
+    .hrmaskb {
+        width: 185px;
+        height: 90px;
+    }
+
+    .hrmaskc {
+        width: 195px;
+        height: 163px;
+    }
+
+} */
 
 
 @media (max-width: 576px) {
@@ -1635,14 +1659,15 @@ h3 {
     }
 
     .pressIndex_img div {
-        border-radius: 9px !important;
+        border-radius: 7px !important;
         
       
     }
 
     .maskcon {
         gap: 5px;
-        padding: 5px;
+        padding: 3.7px;
+        border: 2px solid;
     }
 
     .conmas {
@@ -1655,26 +1680,34 @@ h3 {
 
     .exp {
         margin-top: 0;
+        margin-bottom: 0;
     }
 
       
     .hrmask {
-        width: 128px;
-        height: 25px;
+        width: 126px;
+        height: 22px;
          border-radius: 5px;
+         margin-bottom: 10px;
     }
     
     .hrmaskb {
-        width: 128px;
-        height: 45px;
+        width: 126px;
+        height: 50px;
          border-radius: 5px;
     } 
 
     .hrmaskc {
-        width: 131px;
-        height: 76px;
+        width: 125px;
+        height: 88px;
         border-radius: 5px;
     }
+
+        .pressIndex p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 12px;
+        }
 }
 
 .pressIndex {
@@ -1703,10 +1736,10 @@ h3 {
         padding: 20px;
     }
 
-    .exp {
+    /* .exp {
         font-size: 24px;
         margin-bottom: 25px;
-    }
+    } */
 
 }
 
@@ -1747,23 +1780,25 @@ h3 {
     }
 
     .pressIndex_img div {
-        width: 370px;
-        height: 220px;
+        width: 310px;
+        height: 230px;
+        border: 2px;
+        border-radius: 20px;
     }
 }
 
 @media  (max-width: 768px) {
     .pressIndex_img div {
-        width: 350px;
-        height: 170px;
+        width: 220px;
+        height: 180px;
     }
 } 
 
 @media (max-width: 576px) {
     .pressIndex_img div {
-        width: 230px;
-        height: 90px;
-        border: 5px solid #C1E3FF;
+        width: 135px;
+        height: 97px;
+        border: 1px solid #C1E3FF;
         border-radius: 2px;
     }
 }
@@ -1965,7 +2000,7 @@ h3 {
 
     .myButtona {
         padding: 8px 13px;
-        font-size: 12px;
+        font-size: 10px;
         max-width: 85px;
         text-wrap: nowrap;
     }
@@ -2049,7 +2084,12 @@ footer {
 
 .icunn {
     text-decoration: none;
+
 }
+
+/* .imgsiwft:hover {
+    transform: rotateY(720deg);
+} */
 
 .icunn2 {
     text-decoration: none;
