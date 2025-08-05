@@ -384,7 +384,7 @@ h3 {
     }
 
     h3 {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
@@ -399,7 +399,7 @@ h3 {
     }
 
     h3 {
-        font-size: 12px;
+        font-size: 9px;
     }
 }
 
@@ -430,7 +430,7 @@ h3 {
 
 @media (max-width: 768px) {
     .cta_startJourney {
-        font-size: 19px;
+        font-size: 15px;
         padding: 15px 25px;
         margin-bottom: 20px;
     }
@@ -438,9 +438,9 @@ h3 {
 
 @media (max-width: 480px) {
     .cta_startJourney {
-        font-size: 15px;
+        font-size: 8px;
         padding: 10px 18px;
-        
+        margin-top: 11px;
     }
 }
 
@@ -1839,7 +1839,7 @@ h3 {
 @media (max-width: 568px) {
     .tabuealink, .tabuealink_b {
         border-radius: 20px;
-        padding: 12px 28px;
+        padding: 6px 10px;
         font-size: 9px;
     }
 }
@@ -1948,7 +1948,7 @@ h3 {
     }
 
     .myButtona {
-        padding: 7px 15px;
+        padding: 8px 15px;
         max-width: 250px;
         border-radius: 15px;
     }
@@ -1964,16 +1964,16 @@ h3 {
     }
 
     .myButtona {
-        padding: 5px 10px;
+        padding: 8px 13px;
         font-size: 12px;
-        max-width: 85px
-
+        max-width: 85px;
+        text-wrap: nowrap;
     }
 
     .myButtonb {
         border-radius: 15px;
         font-size: 12px;
-        padding: 10px;
+        padding: 8px 13px;
     }
 }
 
@@ -2504,7 +2504,7 @@ input{
 
  
     .image-stack-container {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .image-stack {
@@ -3433,6 +3433,7 @@ image-stack .image .active {
     .blubox, .grnbox, .yelbox {
         padding: 5px 22px;
         font-size: 7px;
+        border-radius: 2.08px;
     }
 
     .fixed-line {

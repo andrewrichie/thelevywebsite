@@ -149,12 +149,6 @@
 @media (max-width: 768px) {
   
 
-    .whyLevy_topic {
-        font-size: 32px;
-        
-       
-    }
-
 
     .whytopica, .whytopicb {
     font-size: 24px;
@@ -175,13 +169,16 @@
 
 @media (max-width: 568px) {
     .whytopica, .whytopicb {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 0px;
     }
 
-    .whyLevy_topic {
-        
-        
+    .whytopica {
+        margin-bottom: 16px;
+    }
+
+    .whytopicb {
+        margin-bottom: 36px;
     }
 
 }
@@ -359,7 +356,7 @@
     }
 
     .leadP_ceodetail {
-        font-size: 8px;
+        font-size: 9px;
         width: 80%;
     }
 
@@ -760,6 +757,16 @@
 }
 
 @media (max-width: 568px) {
+    .techCert {
+        margin-bottom: 0px;
+        margin-left: 0;
+        padding: 10px 20px;
+    }
+
+    .the-stats {
+        padding-top: 0;
+        margin-top: 0;
+    }
 
     .stats {
         height: 50px;

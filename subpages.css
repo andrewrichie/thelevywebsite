@@ -348,6 +348,10 @@
         width: 350px;
     }
 
+    .dataArch {
+        margin: 0;
+    }
+
     .archGrid_info, .archGrid_infobb {
         width: 350px;
         height: 150px;
