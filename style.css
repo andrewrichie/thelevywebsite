@@ -153,7 +153,7 @@ header {
   }
   
   .nav-item:hover {
-    background-color: #B2DDFF;
+    background-color:#EDF7FF;
     color: #000;
   }
   
@@ -176,7 +176,7 @@ header {
   
   /* Hover effects for <a> */
   .nav-item:hover a {
-    background-color: #B2DDFF;
+    background-color: #EDF7FF;
     color: #000;
   }
   
@@ -222,6 +222,8 @@ header {
 
     
   @media (max-width: 768px) {
+  
+
     .top {
         gap: 15px;
     }
@@ -250,6 +252,10 @@ header {
 }
 
   @media (max-width: 568px) {
+      .nav-wrapper {
+        display: none;
+    }
+
     .top {
         gap: 10px;
     }
@@ -278,6 +284,125 @@ header {
 
 
   }
+
+/* changes*/
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 567px) {
+  /* Container for mobile nav system */
+  .mobile-nav {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Toggle button container (for positioning) */
+  .mobile-nav-toggle-container {
+    text-align: right;
+    padding: 0.2rem 1rem 0 1rem;
+    margin-top: -80px;
+  }
+
+  /* Hamburger / X toggle button */
+  .mobile-nav-toggle {
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+
+  /* Icon switch between hamburger and close */
+  .mobile-nav-toggle::before {
+    content: "☰";
+  }
+
+  .mobile-nav-toggle.open::before {
+    content: "✖";
+  }
+
+  /* Navigation menu (hidden by default) */
+  .mobile-nav-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(190,225,254);
+    border-radius: 8px;
+    z-index: 1000;
+
+    /* Transition styles */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+
+    /* Layout */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* When nav is open */
+  .mobile-nav-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Logo container */
+  .mobile-nav-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-nav-logo img {
+    height: 18px;
+    width: 58px;
+    
+  }
+
+  /* Nav links styling */
+  .mobile-nav-menu ul {
+    list-style: none; /* ✅ no bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .mobile-nav-menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0.75rem 1rem; /* ✅ space between navs */
+    border-radius: 5px;
+    display: block;
+  }
+
+  .mobile-nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 /* nav key ends here */
 
@@ -375,6 +500,10 @@ h3 {
 }
 
 @media (max-width: 576px) {
+    .levyIntro {
+        margin-top: 40px;
+    }
+
     h1 {
         font-size: 31px;
     }
@@ -399,7 +528,7 @@ h3 {
     }
 
     h3 {
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 
@@ -438,7 +567,7 @@ h3 {
 
 @media (max-width: 480px) {
     .cta_startJourney {
-        font-size: 8px;
+        font-size: 12px;
         padding: 10px 18px;
         margin-top: 11px;
     }
@@ -699,11 +828,11 @@ h3 {
     .analyticsUnleash img {
         width: 100px;
         height: 60px;
-        
+        margin-top: -15px;
     }
     
     .analyticsUnleash p {
-        font-size: 10.22px;
+        font-size: 12px;
         color: white;
     }
 }
@@ -726,7 +855,7 @@ h3 {
 
 @media (max-width: 568px) {
     .effAnalytics {
-        font-size: 24px;
+        font-size: 14px;
         margin-bottom: 20px;
     }
 }
@@ -878,27 +1007,27 @@ h3 {
 @media (max-width: 576px) {
 
     .commonChallenge {
-        margin-top: -130px;
+        margin-top: -220px;
         margin-bottom: 50px;
     }
 
     .challengeData {
-        padding: 10px;
-       
+        padding: 20px;
+         grid-template-columns: 1fr;
     }
 
     .challengeData_img {
-        width: 13px;
+        width: 25px;
     }
 
     .challengeData_topic {
-        font-size: 9px;
+        font-size: 16px;
         margin-top: 4px;
         margin-bottom: 2px;
     }
 
     .challengeData_text {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .comP {
@@ -1298,16 +1427,16 @@ h3 {
     
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 599px) {
     .green {
-        height: 100px;
+        height: 135px;
         width: 350px;
         padding: 10px;
         background-image: url(levy\ img/smallgrn.png);
     }
 
     .rare-swiper-slide {
-        margin-top: -10px;
+        margin-top: 7px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -1315,20 +1444,26 @@ h3 {
         align-items: center;
     }
 
+    .rare-top-content {
+        margin-bottom: 0px;
+    }
+
     .rare-image {
         width: 12px;
+        margin-bottom: 2px;
     }
 
     .rare-description {
-        font-size: 6px;
-        width: 60%;
-        margin-left: 40px ;
+        font-size: 9px;
+        width: 100%;
+        margin-left: 0px ;
         margin-top: 0;
     }
 
     .rare-topic {
         font-size: 6px;
         line-height: 7px;
+        margin-left: 3px;
     }
 
     .rare-swiper-pagination {
@@ -1639,7 +1774,7 @@ h3 {
         width: 350px;
         height: 180px;
         border-radius: 10px;
-        border: 5px solid #C1E3FF;
+        border: 7px solid #C1E3FF;
         padding: 0px;
     
     }
@@ -1685,14 +1820,14 @@ h3 {
 
       
     .hrmask {
-        width: 126px;
+        width: 124px;
         height: 22px;
          border-radius: 5px;
          margin-bottom: 10px;
     }
     
     .hrmaskb {
-        width: 126px;
+        width: 124px;
         height: 50px;
          border-radius: 5px;
     } 
@@ -1837,6 +1972,7 @@ h3 {
     .pressFreedom_cta {
         font-size: 8px;
         gap: 10px;
+        flex-direction: column;
     }
 }
 
@@ -1875,7 +2011,7 @@ h3 {
     .tabuealink, .tabuealink_b {
         border-radius: 20px;
         padding: 6px 10px;
-        font-size: 9px;
+        font-size: 10px;
     }
 }
 
@@ -2814,19 +2950,19 @@ image-stack .image .active {
 @media (max-width: 576px) {
 
     .swiper-container {
-        height: 150px;
+        height: 190px;
         
     }
 
     .custom-swiper {
-        height: 150px;
+        height: 190px;
         margin-top: 40px;
     }
 
 
     .swiper-bg {
         width: 100%;
-        height: 150px;
+        height: 190px;
         background-image: url(levy\ img/smallblup.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -2836,21 +2972,22 @@ image-stack .image .active {
     .swiper-slide {
         width: 100%;
         height: 90px;
-        margin-top: -30px;
+        margin-top: -5px;
         padding: 5px;
        
        
        
     }
     .slide-text :nth-child(1) {
-        font-size: 7.58px;
+        font-size: 6px;
         font-weight: 600;
     }
     
     .slide-text :nth-child(2) {
-        font-size: 6.14px;
+        font-size: 7.5px;
         font-weight: 400px;
         margin-top: 4px;
+        line-height: 9px;
     } 
 
     .swiper-slide .slide-image {
@@ -2859,7 +2996,8 @@ image-stack .image .active {
     }
 
     .slide-text {
-        width: 60%;
+        width: 75%;
+        margin-left: 5px;
     }
 }
 
@@ -3053,39 +3191,40 @@ image-stack .image .active {
 @media (max-width: 576px) {
 
     .reverse-swiper {
-        height: 150px !important;
+        height: 190px !important;
         margin-bottom: 200px;
-        margin-top: -45px;
+        margin-top: -85px;
     }
 
     .reverse-swiper .swiper-bg {
         width: 100%;
-        height: 150px;
+        height: 190px;
         background-image: url(levy\ img/smallbldw.png);
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     .reverse-container {
-        height: 150px;
+        height: 190px;
     }
 
     .reverse-swiper .swiper-slide {
         width: 100%;
         height: 90px;
        
-        margin-top: 80px;
+        margin-top: 105px;
         padding: 5px;
     }
     .reverse-swiper .slide-text :nth-child(1) {
-        font-size: 7.58px;
+        font-size: 6px;
         font-weight: 600;
     }
     
     .reverse-swiper .slide-text :nth-child(2) {
-        font-size: 6.14px;
+        font-size: 7.5px;
         font-weight: 400px;
-        margin-top: 9px;
+        margin-top: 4px;
+        line-height: 9px;
     } 
 
     .reverse-swiper .swiper-slide .slide-image {
@@ -3094,7 +3233,8 @@ image-stack .image .active {
     }
 
     .reverse-swiper .slide-text {
-        width: 60%;
+        width: 75%;
+        margin-right: 5px;
     }
 }
 
@@ -3461,7 +3601,7 @@ image-stack .image .active {
     
       .datacoint {
         color: black;
-        font-size: 8px;
+        font-size: 12px;
         font-family: var(--ff-primary);
       }
     
@@ -3472,16 +3612,22 @@ image-stack .image .active {
 
     .blubox, .grnbox, .yelbox {
         padding: 5px 22px;
-        font-size: 7px;
+        font-size: 10px;
         border-radius: 2.08px;
+        margin-top: 2px;
     }
 
     .fixed-line {
-        left: 35%;
+        left: 33%;
     }
 
     .card {
-        gap: 5px;
+        gap: 0px;
+        padding-bottom: 0.2rem; 
+    }
+
+    .cards {
+        gap: 0px;
     }
 
     /* .row {

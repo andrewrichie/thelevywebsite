@@ -43,6 +43,26 @@
      
     </head>
 
+         <section class="smallnav">
+           <!-- ✅ MOBILE NAV -->
+            <div class="mobile-nav">
+            <div class="mobile-nav-toggle-container">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation"></button>
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <div class="mobile-nav-logo">
+                <img src="levy img/Group 1000002904.png" alt="Logo" />
+                </div>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="blog.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+        </section>
+
     <div class="subbody">
 
         
@@ -228,8 +248,21 @@
 
    
 
-    
-    <script src="script.js"></script>
+    <script>
+                
+             document.addEventListener("DOMContentLoaded", function () {
+                        const toggle = document.querySelector(".mobile-nav-toggle");
+                        const menu = document.querySelector(".mobile-nav-menu");
+
+                        toggle.addEventListener("click", function () {
+                        toggle.classList.toggle("open");
+                        menu.classList.toggle("open");
+                        });
+                    });
+
+    </script>
+    <script src="script.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
     

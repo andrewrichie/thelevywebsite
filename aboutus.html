@@ -39,6 +39,26 @@
 
   
     </header>
+
+        <section>
+           <!-- ✅ MOBILE NAV -->
+            <div class="mobile-nav">
+            <div class="mobile-nav-toggle-container">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation"></button>
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <div class="mobile-nav-logo">
+                <img src="levy img/Group 1000002904.png" alt="Logo" />
+                </div>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="blog.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+        </section>
     
 
    
@@ -72,7 +92,7 @@
             </div>
 
         </div>
-
+<!-- 
         <div  class="leaddiv animation_section">
             <div class="leaddiv2">
                 <img class="leaddiv2_img" src="levy img/Mask group (2).png">
@@ -83,7 +103,7 @@
                 <p class="leadP_ceodetail">
                     Alex graduated from SMU with a BBA in Marketing and MS in Business Analytics. He spent 6 years at Accenture as a Data Visualization SME before founding Levy Analytics Group in 2022 to make data services accessible to all organizations.
                 </p>
-            </div>
+            </div> -->
 
         </div>
 
@@ -343,6 +363,19 @@
 
                     document.querySelectorAll('.number').forEach(el => numberObserver.observe(el));
                 });
+
+
+
+                     document.addEventListener("DOMContentLoaded", function () {
+                        const toggle = document.querySelector(".mobile-nav-toggle");
+                        const menu = document.querySelector(".mobile-nav-menu");
+
+                        toggle.addEventListener("click", function () {
+                        toggle.classList.toggle("open");
+                        menu.classList.toggle("open");
+                        });
+                    });
+
 
        
     </script>

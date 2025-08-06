@@ -109,6 +109,7 @@
 
 @media (max-width: 598px) {
     .whyLevy {
+        
       
     }
 
@@ -168,6 +169,10 @@
 }
 
 @media (max-width: 568px) {
+    .whyLevy {
+        margin-top: 40px;
+    }
+
     .whytopica, .whytopicb {
     font-size: 12px;
     margin-left: 0px;

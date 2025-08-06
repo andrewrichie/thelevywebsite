@@ -34,26 +34,46 @@
             <div class="top">
                 <img class="levyLogo" src="levy img/Group 1000002904.png" >
 
-
                 <div class="nav-wrapper">
+                 
+                    <!-- NAVIGATION -->
                     <nav class="vertical-nav">
-                        <ul class="ff-basic fs-400">
-                            <li class="nav-item active" data-target="home"><a href="index.html">Home</a></li>
-                            <li class="nav-item" data-target="about"><a href="aboutus.html">About</a></li>                            
-                            <li class="nav-item" data-target="blog"><a href="blog.html">Contact Us </a></li>
-                        </ul>
+                    <ul class="ff-basic fs-400">
+                        <li class="nav-item active"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="aboutus.html">About</a></li>
+                        <li class="nav-item"><a href="blog.html">Contact Us</a></li>
+                    </ul>
                     </nav>
                 </div>
+
+
             </div>
          
-
       
         </header>
     
-    
-    
      
     </head>
+
+    <section>
+           <!-- ✅ MOBILE NAV -->
+            <div class="mobile-nav">
+            <div class="mobile-nav-toggle-container">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation"></button>
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <div class="mobile-nav-logo">
+                <img src="levy img/Group 1000002904.png" alt="Logo" />
+                </div>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="blog.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+    </section>
 
   
 
@@ -125,7 +145,7 @@
             <div class="analyticsContainer container1">
                 <div class="analyticsBorder"></div>
                 <div class="analyticsUnleash">
-                    <img src="levy img/Group 1000002847 1.png">
+                    <img src="levy img/levydataunleash.png">
                     <p class="ff-basic">
                         Levy Analytics Unleashes<br>
                         the Power of Your Data
@@ -717,7 +737,21 @@
                   });
 
 
-       
+
+
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const toggle = document.querySelector(".mobile-nav-toggle");
+                        const menu = document.querySelector(".mobile-nav-menu");
+
+                        toggle.addEventListener("click", function () {
+                        toggle.classList.toggle("open");
+                        menu.classList.toggle("open");
+                        });
+                    });
+
+              
+                    
         </script>
 
     
