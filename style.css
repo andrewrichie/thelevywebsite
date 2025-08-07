@@ -290,42 +290,40 @@ header {
 .mobile-nav {
     display: none;
 }
-
 @media (max-width: 567px) {
-  /* Container for mobile nav system */
   .mobile-nav {
     display: block;
     position: relative;
     width: 100%;
   }
 
-  /* Toggle button container (for positioning) */
-  .mobile-nav-toggle-container {
-    text-align: right;
-    padding: 0.2rem 1rem 0 1rem;
-    margin-top: -80px;
-  }
+ .mobile-nav-toggle-container {
+  position: absolute;       /* ✅ float on top */
+  top: 0.75rem;
+  right: 1rem;
+  z-index: 1001;
+}
 
-  /* Hamburger / X toggle button */
+
   .mobile-nav-toggle {
     background: none;
     border: none;
-    font-size: 12px;
+    font-size: 24px;
+    padding: 0.5rem;
     cursor: pointer;
-    z-index: 1001;
     position: relative;
+    z-index: 1001;
   }
 
-  /* Icon switch between hamburger and close */
   .mobile-nav-toggle::before {
     content: "☰";
+    font-size: 24px;
   }
 
   .mobile-nav-toggle.open::before {
     content: "✖";
   }
 
-  /* Navigation menu (hidden by default) */
   .mobile-nav-menu {
     position: absolute;
     top: 0;
@@ -333,50 +331,42 @@ header {
     right: 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgb(190,225,254);
+    background-color: rgb(190, 225, 254);
     border-radius: 8px;
     z-index: 1000;
-
-    /* Transition styles */
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
-
-    /* Layout */
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  /* When nav is open */
   .mobile-nav-menu.open {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
   }
 
-  /* Logo container */
   .mobile-nav-logo {
     text-align: center;
     margin-bottom: 1rem;
   }
 
   .mobile-nav-logo img {
-    height: 18px;
+    height: 20px;
     width: 58px;
     
   }
 
-  /* Nav links styling */
   .mobile-nav-menu ul {
-    list-style: none; /* ✅ no bullets */
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     gap: 0.75rem;
   }
@@ -384,8 +374,8 @@ header {
   .mobile-nav-menu li a {
     color: black;
     text-decoration: none;
-    font-size: 13px;
-    padding: 0.75rem 1rem; /* ✅ space between navs */
+    font-size: 14px;
+    padding: 0.75rem 1rem;
     border-radius: 5px;
     display: block;
   }
