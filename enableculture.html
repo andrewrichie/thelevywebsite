@@ -32,7 +32,7 @@
             </div>
 
         <header>
-            <img class="bigImg" src="levy img/high_empyrean_this_image_shows_an_interesting_abstract_art_desi_0efd0bd4-ef4e-446a-9b5d-d1f654000006 1.png">
+            <img class="bigImg" src="levy img/levypageoneIMG.png">
 
             <div class="top">
                 <img class="levyLogo" src="levy img/Group 1000002904.png" >
@@ -172,6 +172,80 @@
 
 
     
+            <div class="effAnalytics ff-basic">
+                Creating Effective<br>
+                and Efficient Analytics
+            </div>
+
+                    
+            <!-- new table of content  -->
+            
+                    <!-- WRAPPER -->
+            <div class="section-scroll" style="position: relative;">
+                <!-- Fixed green vertical line -->
+                <div class="fixed-line"></div>
+  
+                <!-- Custom fake scrollbar -->
+                <div class="custom-scrollbar">
+                  <div class="scroll-thumb"></div>
+                </div>
+  
+                <!-- Scrollable section -->
+                <section class="service-pager" id="content">
+  
+                  <!-- ROW 1 -->
+                  <div class="row">
+                    <div class="label">
+                      <img class="labImg" src="levy img/greenlightbulb.png" alt="">
+                      <p class="dataTop">Automate&nbsp;Your&nbsp;Data</p>
+                      <p class="datIfo">Transform data for self-service analytics</p>
+                    </div>
+                    <div class="cards">
+                      <article class="card graen">
+                        <h4 style="color: #06AA47;">Data Architecture</h4>
+                        <p class="datacoint">Design datasets with trusted patterns that balance performance and accessibility.</p>
+                        <a href="automatedata.html" target="_blank"><div class="grnbox">Learn More</div></a>
+                      </article>
+                      <article class="card graen">
+                        <h4 style="color: #06AA47;">Data Engineering</h4>
+                        <p class="datacoint">Automate your data workflows using advanced processing tools that leverage the full scalability of the cloud.</p>
+                        <a href="automatedata.html" target="_blank"><div class="grnbox">Learn More</div></a>
+                      </article>
+                    </div>
+                  </div>
+  
+  
+                  <!-- ROW 3 -->
+                  <div class="row">
+                    <div class="label">
+                      <img class="labImg" src="levy img/yellightblub.jpg" alt="">
+                      <p class="dataTop">Insight&nbsp;Generation</p>
+                      <p class="datIfo">Evolve the culture of your organization</p>
+                    </div>
+                    <div class="cards">
+                      <article class="card gold">
+                        <h4 style="color: #ffb804;">Data Science</h4>
+                        <p class="datacoint">Maximize your data value by deriving information using trusted machine learning models and AI tools.</p>
+                        <a href="insigtgen.html" target="_blank"><div class="yelbox">Learn More</div></a>
+                      </article>
+                      <article class="card gold">
+                        <h4 style="color: #ffb804;">Data Visualization</h4>
+                        <p class="datacoint">Translate data into insights efficiently and effectively driving business outcomes.</p>
+                        <a href="insigtgen.html" target="_blank"><div class="yelbox">Learn More</div></a>
+                      </article>
+                    </div>
+                  </div>
+  
+                </section>
+              </div>
+  
+
+            <!-- ends here -->
+
+
+
+
+    
 
     
 
@@ -264,6 +338,61 @@
                         menu.classList.toggle("open");
                         });
                     });
+
+
+
+                    
+
+                    // new nav java
+                           document.addEventListener('DOMContentLoaded', function () {
+                            const topBar = document.querySelector('.top');
+                            if (!topBar) return;
+
+                            let stickPoint = 0;
+                            let isFixed = false;
+                            let lastY = window.pageYOffset || 0;
+                            let downAccum = 0, upAccum = 0;
+
+                            // measure original absolute position
+                            const measure = () => {
+                                const rect = topBar.getBoundingClientRect();
+                                stickPoint = rect.top + window.pageYOffset;
+                            };
+
+                            measure();
+                            window.addEventListener('resize', measure);
+
+                            const onScroll = () => {
+                                const y = window.pageYOffset || 0;
+
+                                // switch to fixed when we scroll past its natural position
+                                if (!isFixed && y >= stickPoint) {
+                                isFixed = true;
+                                topBar.classList.add('is-fixed');
+                                } else if (isFixed && y < stickPoint) {
+                                isFixed = false;
+                                topBar.classList.remove('is-fixed', 'hide');
+                                downAccum = upAccum = 0;
+                                }
+
+                                // hide/show while fixed
+                                if (isFixed) {
+                                const dy = y - lastY;
+                                if (dy > 0) { // down
+                                    downAccum += dy; upAccum = 0;
+                                    if (downAccum > 40) topBar.classList.add('hide');
+                                } else if (dy < 0) { // up
+                                    upAccum += -dy; downAccum = 0;
+                                    if (upAccum > 10) topBar.classList.remove('hide');
+                                }
+                                }
+
+                                lastY = y;
+                            };
+
+                            window.addEventListener('scroll', onScroll, { passive: true });
+                            });
+                                 
 
     </script>
     <script src="script.js"></script>

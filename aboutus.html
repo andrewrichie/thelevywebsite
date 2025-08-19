@@ -379,6 +379,61 @@
                     });
 
 
+
+                    
+
+                    // new nav java
+                           document.addEventListener('DOMContentLoaded', function () {
+                            const topBar = document.querySelector('.top');
+                            if (!topBar) return;
+
+                            let stickPoint = 0;
+                            let isFixed = false;
+                            let lastY = window.pageYOffset || 0;
+                            let downAccum = 0, upAccum = 0;
+
+                            // measure original absolute position
+                            const measure = () => {
+                                const rect = topBar.getBoundingClientRect();
+                                stickPoint = rect.top + window.pageYOffset;
+                            };
+
+                            measure();
+                            window.addEventListener('resize', measure);
+
+                            const onScroll = () => {
+                                const y = window.pageYOffset || 0;
+
+                                // switch to fixed when we scroll past its natural position
+                                if (!isFixed && y >= stickPoint) {
+                                isFixed = true;
+                                topBar.classList.add('is-fixed');
+                                } else if (isFixed && y < stickPoint) {
+                                isFixed = false;
+                                topBar.classList.remove('is-fixed', 'hide');
+                                downAccum = upAccum = 0;
+                                }
+
+                                // hide/show while fixed
+                                if (isFixed) {
+                                const dy = y - lastY;
+                                if (dy > 0) { // down
+                                    downAccum += dy; upAccum = 0;
+                                    if (downAccum > 40) topBar.classList.add('hide');
+                                } else if (dy < 0) { // up
+                                    upAccum += -dy; downAccum = 0;
+                                    if (upAccum > 10) topBar.classList.remove('hide');
+                                }
+                                }
+
+                                lastY = y;
+                            };
+
+                            window.addEventListener('scroll', onScroll, { passive: true });
+                            });
+                                 
+
+
        
     </script>
     

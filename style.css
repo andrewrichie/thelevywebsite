@@ -42,7 +42,7 @@ body {
 header {
     position: relative;
     width: 100%;
-   
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,21 +53,42 @@ header {
 .bigImg {
     width: 100%;
     height: auto;
-    display: block;
-    max-height: 800px;
-    opacity: 20%;
+    /* display: block; */
+    max-height: 400px;
+    margin-bottom: 0px;
 }
 
 .top {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 25%;
-    /* left: 30%; */
-    gap: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;   /* start as absolute */
+  top: 25%;
+  gap: 70px;
+  transition: transform .25s ease, box-shadow .2s ease, background-color .2s ease;
+  z-index: 1000;
+  background: transparent;
 }
+
+
+
+/* becomes true only when we make it fixed at the top */
+.top.is-fixed {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;                   /* background only when fixed */
+  padding: 20px 0; 
+}
+
+/* slide out when scrolling down (only used while fixed) */
+.top.is-fixed.hide {
+  transform: translateY(-100%);
+}
+
+/* optional: a spacer gets injected before .top to prevent layout jump */
+.top-spacer { height: 0; }
+
 
 .levyLogo {
     /* position: absolute; */
@@ -119,6 +140,7 @@ header {
     left: 45%; */
     /* padding-bottom:10.5rem; */
   }
+
   
   /* Navigation Styling */
   .vertical-nav {
@@ -188,6 +210,11 @@ header {
   }
 
 
+/* nav sticy addition */
+/* default: normal flow, transparent */
+
+
+/* ends here */
 
     
     
@@ -413,7 +440,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin-bottom: 104px;
-    margin-top: -150px;
+    margin-top: 50px;
 }
 
 
@@ -1552,7 +1579,7 @@ h3 {
 }
 
 .forstat {
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 @media (max-width: 768px) {
@@ -2992,6 +3019,44 @@ image-stack .image .active {
 }
 
 
+.custom-prev, .custom-next {
+  position: absolute;
+  top: 60%;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+
+.main-prev { left: 150px;  background-image: url('levy img/bluejavaarrowleft.png'); }
+.main-next { right: 150px; background-image: url('levy img/bluejavarrowright.png'); }
+
+.reverse-prev { left: 150px; top: 40%; background-image: url('levy img/bluejavaarrowleft.png'); }
+.reverse-next { right: 150px; top: 40%; background-image: url('levy img/bluejavarrowright.png'); }
+
+@media (max-width:1300px) {
+    .main-prev { left: 20px; }
+    .main-next { right: 20px; }
+    .reverse-prev { left: 20px; }
+    .reverse-next { right: 20px; }
+
+}
+
+@media (max-width:768px) {
+    .custom-prev, .custom-next {
+        width: 20px;
+    }
+}
+
+@media (max-width:568px) {
+    .custom-prev, .custom-next {
+        display: none;
+    }
+}
 
 
 
@@ -3261,13 +3326,14 @@ image-stack .image .active {
   
   .service-pager{
   
-    height: clamp(250px, 30vh, 400px);
+    /* height: clamp(250px, 30vh, 400px); ==change */
+    
     max-width: 1300px;
     overflow-y:auto;
     scroll-snap-type:y mandatory;
     scroll-behavior: smooth;
     display:grid;
-    grid-auto-rows: 30vh;       
+    /* grid-auto-rows: 30vh;  ==change      */
     border-inline:var(--g) solid transparent;
     margin: 0 auto;
     scroll-padding-top: 0;
@@ -3282,7 +3348,7 @@ image-stack .image .active {
     max-width: 1300px;
     margin: 0 auto;
     margin-bottom: 200px;
-
+    
   }
   
   .fixed-line {
@@ -3290,8 +3356,9 @@ image-stack .image .active {
     top: 0;
     bottom: 0;
     left: calc(var(--w-label) + var(--g) / 2); /* aligns with line between label and cards */
-    width: 1px;
-    height: 300px;
+    width: 3px;
+    /* height: 300px; ==change */
+    height: auto;
     background-color: green;
     z-index: 1;
     pointer-events: none;
@@ -3319,6 +3386,8 @@ image-stack .image .active {
     position: absolute;
     top: 0;
     transition: top 0.1s ease-out;
+    /* ==change */
+    display: none;
   }
 
 
@@ -3372,6 +3441,8 @@ image-stack .image .active {
     scroll-snap-align:start;
     position:relative;
     max-height: 300px;
+    /* change */
+    margin-bottom: 50px;
   }
 
 
@@ -3420,6 +3491,7 @@ image-stack .image .active {
   .datIfo {
     font-size: 12px;
     font-family: var(--ff-primary);
+    display: none;
   }
 
   h4 {
@@ -3439,7 +3511,7 @@ image-stack .image .active {
 }
 
   .grnbox {
-    background-color: #03712E;
+    background-color: #06aa47;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -3453,7 +3525,7 @@ image-stack .image .active {
 }
 
   .blubox {
-    background-color: #0466D6;
+    background-color: #2188fe;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -3467,7 +3539,7 @@ image-stack .image .active {
   }
 
   .yelbox {
-    background-color: #C38C01;
+    background-color: #ffb804;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -3570,7 +3642,8 @@ image-stack .image .active {
         display: grid;
         grid-template-columns: 30% 1fr;
         column-gap: 1rem;
-        margin-bottom: 100px;
+        /* ==change */
+        margin-bottom: 20px;
     }
 
     .dataTop {
@@ -3609,6 +3682,8 @@ image-stack .image .active {
 
     .fixed-line {
         left: 33%;
+        /* ==change */
+        height: 100%;
     }
 
     .card {

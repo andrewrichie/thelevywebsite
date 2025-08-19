@@ -47,7 +47,7 @@
     
 
         <header>
-            <img class="bigImg" src="levy img/high_empyrean_this_image_shows_an_interesting_abstract_art_desi_0efd0bd4-ef4e-446a-9b5d-d1f654000006 1.png">
+            <img class="bigImg" src="levy img/levypageoneIMG.png">
 
             <div class="top">
                 <img class="levyLogo" src="levy img/Group 1000002904.png" >
@@ -179,7 +179,7 @@
                   <!-- ROW 1 -->
                   <div class="row">
                     <div class="label">
-                      <img class="labImg" src="levy img/auto.png" alt="">
+                      <img class="labImg" src="levy img/greenlightbulb.png" alt="">
                       <p class="dataTop">Automate&nbsp;Your&nbsp;Data</p>
                       <p class="datIfo">Transform data for self-service analytics</p>
                     </div>
@@ -200,7 +200,7 @@
                   <!-- ROW 2 -->
                   <div class="row">
                     <div class="label">
-                      <img class="labImg" src="levy img/enable.png" alt="">
+                      <img class="labImg" src="levy img/bluelightbulb.jpg" alt="">
                       <p class="dataTop">Enable&nbsp;Data&nbsp;Culture</p>
                       <p class="datIfo">Evolve the culture of your organization</p>
                     </div>
@@ -221,7 +221,7 @@
                   <!-- ROW 3 -->
                   <div class="row">
                     <div class="label">
-                      <img class="labImg" src="levy img/insight.png" alt="">
+                      <img class="labImg" src="levy img/yellightblub.jpg" alt="">
                       <p class="dataTop">Insight&nbsp;Generation</p>
                       <p class="datIfo">Evolve the culture of your organization</p>
                     </div>
@@ -297,6 +297,11 @@
                         </div>
                     </div>
                 </div>
+              
+
+                 <div class="custom-prev main-prev"></div>
+                 <div class="custom-next main-next"></div>
+
             </div>
 
 
@@ -345,6 +350,9 @@
                         </div>
                     </div>
                 </div>
+
+                 <div class="custom-prev reverse-prev"></div>
+                 <div class="custom-next reverse-next"></div>
             </div>
 
 
@@ -422,7 +430,7 @@
 
             <section class="greenSolution">
                 <section class="solutionsOffered">
-                    <p class="ff-basic">SOLUTIONS WE PROFFER</p>
+                    <p class="ff-basic">SOLUTIONS WE OFFER</p>
                 </section>           
 
             
@@ -500,6 +508,33 @@
                 </p>
             </section>
 
+     
+
+            <section class="pressFreedom">
+
+                <div class="pressIndex ff-primary">
+                    <p class="exp">HR Expenses
+                        <br>Executive Summary</p>
+                    <div class="pressIndex_img">
+                        <div class="maskcon">
+                            <img class="hrmask" src="levy img/hrmask1.png">
+                            <img class="hrmaskb" src="levy img/hrmask2.png">
+                        </div>
+                        <div class="conmas"><img class="hrmaskc" src="levy img/hrpicut.png"></div>
+                    </div>
+                </div>
+
+                <div class="pressFreedom_cta ff-basic">
+                    <a class="tabuealink_b" href="https://public.tableau.com/app/profile/levyanalytics/vizzes" target="_blank">
+                        Visit Our Tableau Public
+                    </a>
+                    <a class="tabuealink_b" href="https://www.novypro.com/manage_projects/levy-analytics" target="_blank">
+                        Visit our PowerBI Portfolio
+                    </a>
+                </div>
+            </section>
+
+
         <section class="forstat">
                 
 
@@ -539,39 +574,15 @@
     
         </section>
 
-            <section class="pressFreedom">
-
-                <div class="pressIndex ff-primary">
-                    <p class="exp">HR Expenses
-                        <br>Executive Summary</p>
-                    <div class="pressIndex_img">
-                        <div class="maskcon">
-                            <img class="hrmask" src="levy img/hrmask1.png">
-                            <img class="hrmaskb" src="levy img/hrmask2.png">
-                        </div>
-                        <div class="conmas"><img class="hrmaskc" src="levy img/hrpicut.png"></div>
-                    </div>
-                </div>
-
-                <div class="pressFreedom_cta ff-basic">
-                    <a class="tabuealink_b" href="https://public.tableau.com/app/profile/levyanalytics/vizzes" target="_blank">
-                        Visit Our Tableau Public
-                    </a>
-                    <a class="tabuealink_b" href="https://www.novypro.com/manage_projects/levy-analytics" target="_blank">
-                        Visit our PowerBI Portfolio
-                    </a>
-                </div>
-            </section>
-
             <section class="majorCta ff-basic">
                 <p>
                     Ready to begin your<br> analytics journey with LAG?
                 </p>
                 <div class="ctaButtons">
-                    <button class="myButtona">
+                    <!-- <button class="myButtona">
                         Book A Call
 
-                    </button>
+                    </button> -->
                     <button class="myButtonb">
                         Start Your Analytics Journey Today
                     </button>
@@ -752,8 +763,59 @@
                         });
                     });
 
-              
-                    
+
+
+
+                    // new nav java
+                           document.addEventListener('DOMContentLoaded', function () {
+                            const topBar = document.querySelector('.top');
+                            if (!topBar) return;
+
+                            let stickPoint = 0;
+                            let isFixed = false;
+                            let lastY = window.pageYOffset || 0;
+                            let downAccum = 0, upAccum = 0;
+
+                            // measure original absolute position
+                            const measure = () => {
+                                const rect = topBar.getBoundingClientRect();
+                                stickPoint = rect.top + window.pageYOffset;
+                            };
+
+                            measure();
+                            window.addEventListener('resize', measure);
+
+                            const onScroll = () => {
+                                const y = window.pageYOffset || 0;
+
+                                // switch to fixed when we scroll past its natural position
+                                if (!isFixed && y >= stickPoint) {
+                                isFixed = true;
+                                topBar.classList.add('is-fixed');
+                                } else if (isFixed && y < stickPoint) {
+                                isFixed = false;
+                                topBar.classList.remove('is-fixed', 'hide');
+                                downAccum = upAccum = 0;
+                                }
+
+                                // hide/show while fixed
+                                if (isFixed) {
+                                const dy = y - lastY;
+                                if (dy > 0) { // down
+                                    downAccum += dy; upAccum = 0;
+                                    if (downAccum > 40) topBar.classList.add('hide');
+                                } else if (dy < 0) { // up
+                                    upAccum += -dy; downAccum = 0;
+                                    if (upAccum > 10) topBar.classList.remove('hide');
+                                }
+                                }
+
+                                lastY = y;
+                            };
+
+                            window.addEventListener('scroll', onScroll, { passive: true });
+                            });
+                                                    
         </script>
 
     

@@ -80,6 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         effect: "slide",
         grabCursor: true,
+
+           navigation: {
+           nextEl: '.main-next',
+            prevEl: '.main-prev',
+        },
     });
 });
 
@@ -100,7 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 600, 
         allowTouchMove: true, 
         rtl: false, 
-        navigation: false, 
+        navigation: {
+            nextEl: '.reverse-next',
+            prevEl: '.reverse-prev',
+        },
         pagination: false, 
         on: {
             slideChangeTransitionStart: function () {
@@ -250,6 +258,10 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('.row').forEach(row => observer.observe(row));
 
 
+
+
+  
+// nav java
 
 
   
