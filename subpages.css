@@ -75,7 +75,7 @@
 
 .archNum_a {
     background-color: #EF3731;
-    background-image: url(levy\ img/redgroup.png);
+    /* background-image: url(levy\ img/redgroup.png); */
     color: white;
     font-size: 34.28px;
     font-weight: 700;
@@ -89,7 +89,7 @@
 
 .archNum_b {
     background-color: #FDB813;
-    background-image: url(levy\ img/yellowgroup.png);
+    /* background-image: url(levy\ img/yellowgroup.png); */
     color: white;
     font-size: 34.28px;
     font-weight: 700;
@@ -102,7 +102,7 @@
 
 .archNum_bb {
     background-color: #FDB813;
-    background-image: url(levy\ img/yellowgroup.png);
+    /* background-image: url(levy\ img/yellowgroup.png); */
     color: white;
     font-size: 34.28px;
     font-weight: 700;
@@ -116,7 +116,7 @@
 
 .archNum_c {
     background-color: #11ab4b;
-    background-image: url(levy\ img/greengroup.png);
+    /* background-image: url(levy\ img/greengroup.png); */
     color: white;
     font-size: 34.28px;
     font-weight: 700;
